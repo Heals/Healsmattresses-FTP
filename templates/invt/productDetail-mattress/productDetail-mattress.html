@@ -1,0 +1,384 @@
+<style>#content-default_nocoltwothree {background:none;}</style>
+<div id="tag-loadmessage" style="display:none;"><venda_text id=site.loadmessage></div>
+<div id="tag-qtymsg" style="display:none;"><venda_text id=site.productdetail.validate.qty></div>
+<div id="tag-ebizref" style="display:none;"><venda_setting type=ebiz,name=ref></div>
+<div id="tag-ebizurl" style="display:none;"><venda_ebizurl></div>
+<div id="tag-invtref" style="display:none;"><venda_invtref></div>
+<div id="tag-invtname" style="display:none;"><venda_invtname></div>
+<div id="tag-currsym" style="display:none;"><venda_currsym></div>
+<venda_tpcomment><!-- Jotis Attribute Design Translations --></venda_tpcomment>
+<div id="tag-was" style="display:none;">WAS </div>
+<div id="pdxtAttrName" style="display: none;"><!--<venda_pdxtattrname>-->selection</div>
+<div id="attributes-stockNA" style="display:none;">Sorry, the selection you have made is not available</div>
+<div id="pdxtVideoUrl" style="display:none;"><venda_pdxtvideo></div>
+<div id="pdxtVideo-play" style="display:none;"><venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/pdxtvideo-play.png</div>
+<div id="attributes-stockOut" style="display:none;">The selection you have made is out of stock</div>
+<div id="attributes-productselected" style="display:none;"></div>
+<div id="attributes-productstatus" style="display:none;">Please choose your </div>
+<div id="attributes-only" style="display:none;"></div>
+<div id="attributes-left" style="display:none;"> available</div>
+<div id="attributes-optionDefault" style="display:none;">Please Select...</div>
+<div id="attributes-tooltip" style="display:none;"> is currently out of stock</div>
+<div id="attributes-backorder" style="display:none;">Awaiting Stock</div>
+<div id="attributes-backorder2" style="display:none;">Delivery Due</div>
+<div id="attributes-order" style="display:none;">Special Order</div>
+<div id="attributes-order2" style="display:none;">Item Lead Time</div>
+<div id="attributes-preorder" style="display:none;">Available for Pre-order - Release Date: </div>
+<div id="attributes-quantity" style="display:none;">Please enter a quantity</div>
+<venda_block label=mattress-prod1,invtcatref0=mattresses>
+<div id="attributes-chooseVariant" style="display:none;">Please choose a tension for the mattress you are adding to the basket</div>
+</venda_block label=mattress-prod1>
+<venda_block label=mattress-prod0,invtcatref0!=mattresses>
+<div id="attributes-chooseVariant" style="display:none;">Please choose a varient of the product(s) you are adding to the basket</div>
+</venda_block label=mattress-prod0>
+<div id="attributes-addThisProduct" style="display:none;">Add this Product</div>
+<div id="attributes-addAllProduct" style="display:none;">Add all products</div>
+<div id="attributes-noneChecked" style="display:none;">Please add at least one product</div>
+<venda_tpcomment><!-- VCP switch settings required for attributes JS --></venda_tpcomment>
+<div id="OutOfStockThreshold" style="display: none;"><venda_setting type=ebiz,name=emailmebackthreshold></div><venda_tpcomment><!-- Out of Stock Threshold --></venda_tpcomment>
+<div id="DoNotBackorder" style="display: none;"><venda_setting type=ebiz,name=nobackorderedinclude></div><venda_tpcomment><!-- Do not dispatch backordered items (checked == no backorder)--></venda_tpcomment>
+<div id="emwbisType" style="display: none;"><venda_setting type=ebiz,name=emailmebackcriteria></div><venda_tpcomment><!-- Email me when back in stock criteria (ETA / Release Dates): 4 options: none, eta, release, eta and etarelease --></venda_tpcomment>
+<div itemscope itemtype="http://schema.org/Product">
+<div id="productdetail">
+<script type="text/javascript">
+function deleteVideo(){$("#VideoPlayer")[0].src='';$(".pdxtVideoPlayerContainer").hide();}
+function LoadVideo(){$("#VideoPlayer")[0].src='http://<venda_pdxtvideo>';$(".pdxtVideoPlayerContainer").show();}
+</script>
+<div class="pdxtVideoPlayerContainer" style="display:none;">
+<div class="pdxtVideoPlayer">
+<a onclick="deleteVideo()"><img class="close-button" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/wallpaper-close.jpg" alt="Close" title="Close"></a>
+<iframe id="VideoPlayer" src="" frameborder="0" width="650" height="460" style="margin:0 -20px 0 0;;" /></iframe>
+</div>
+</div>
+<div class="zoomableImages">
+<div id="productdetail-image">
+<venda_block label=10,med-medium=notnull>
+<a itemprop="image" <venda_block label=40,med-large=notnull>href="<venda_media rec=invt,type=movie-swf-pict,key=large,img=no>" onclick="return false;"</venda_block label=40><venda_block label=41,med-large=null>href="<venda_dispview invt=<venda_invtref>>" onclick="return false;"</venda_block label=41> rel="adjustX: 0, adjustY:0" class='cloud-zoom' id='zoom1' data-track="open-largeimage" title="<venda_invtname>"<venda_block label=mattress-prod000,invtcatref0=!mattresses> style="padding:70px 0px 0px 92px;"</venda_block label=mattress-prod000>>
+<venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=medium>
+<!-- show "medium" key by default -->
+</a>
+</venda_block label=10>
+<venda_block label=11,med-medium=null>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/no_image_mattress.gif" alt="<venda_text id=site.link.alt.no_image.invt>">
+</venda_block label=11>
+<div class="rollmadeDesigned">
+<div id="rolloverzoomText"<venda_block pdxtmadein=1,pdxtdesignedin=1,operator=or> style="float:left;"</venda_block>><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/rollover-zoom.gif" /></div>
+<venda_block label=madein,pdxtmadein=1>
+<div id="madeinBritain"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/made-in-britain-m.gif" /></div>
+</venda_block label=madein>
+<venda_block label=designedin,pdxtdesignedin=1>
+<div id="designedinBritain"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/designed-in-britain-m.gif" /></div>
+</venda_block label=designedin>
+</div>
+</div>
+<div id="productdetail-swap" style="display:none;"></div>
+<!-- start: Jotis Alternate Images -->
+<div class="alternative_images_slide">
+<venda_inctemplate name=alternateviewArrows,type=invt>
+   <div class="window_alternative_view">
+        <div class="image_reel_alternative_view">
+        <div class="move_width"></div>
+<ul>
+<div id="productdetail-altview" class="altImageList"></div>
+<venda_inctemplate name=alternateviewScript,type=invt>
+</ul>
+        </div>
+  </div>
+</div>
+<!-- end: Jotis Alternate Images -->
+</div>
+<div id="detailzone">
+<div class="product-detailATabs">
+<venda_block invtivtype!=furniturerange>
+<venda_block label=32,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
+<div id="tag-addedmsgref" style="text-align:center;border:1px solid #B4B4B4;padding:5px;background-color:#F1F1F1;"><venda_addedmsg msg=You have added addedqty x addedname to your basket></div>
+<div id="tag-vbminvtaddedtocart" style="display:none;"><venda_invtref></div>
+</venda_block label=32>
+</venda_block>
+<venda_block errors=notnull><h2 class="error"><venda_errors></h2></venda_block>
+<venda_block label=furniturerange-attr1,invtivtype=furniturerange>
+<div class="oneProduct" id="oneProduct_<venda_invtuuid>">
+<div class="oneProductContent hide">
+<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
+<input type="hidden" name="ex" value="co_wizr-shopcart2">
+<input type="hidden" name="curpage" value="">
+<input type="hidden" name="buy" value="<venda_invtref>">
+<input type="hidden" name="invt" value="<venda_invtref>">
+<input type="hidden" name="ivref" value="<venda_invtref>">
+<input type="hidden" name="bsref" value="heals">
+<input type="hidden" name="log" value="22">
+<input type="hidden" name="mode" value="add">
+<input type="hidden" name="next" value="">
+<input type="hidden" name="bklist" value="">
+<input type="hidden" name="layout" value="">
+</venda_block label=furniturerange-attr1>
+<div id="productdetail-info">
+<div id="productdetail-product">
+<div class="product-title_price">
+<div class="product-title">
+<venda_block invtivtype=furniturerange>
+<div class="attrFeedback productselectedwrapper">
+</venda_block>
+<h1 itemprop="name" id="comp-name<venda_invtref>"><venda_invtname> <span id="productselected"></span></h1>
+<venda_block invtivtype=furniturerange>
+</div>
+</venda_block>
+</div>
+<div class="product-price">
+<venda_block invtivtype=furniture>
+<venda_block label=attributes0,chkatt=null>
+<venda_block label=wasprice0,invtwas=null>
+<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<div id="parentprice"><span itemprop="price"><venda_currsym><venda_invtsell></span></div>
+</div>
+</venda_block label=wasprice0>
+<venda_block label=wasprice1,invtwas=notnull>
+<div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+<div id="parentprice" class="pricenow"><span itemprop="lowPrice"><venda_currsym><venda_invtsell></span></div>
+<div class="productdetail_was">WAS <span id="was"><span itemprop="highPrice"><venda_currsym><venda_invtwas></span></span></div>
+</div>
+</venda_block label=wasprice1>
+</venda_block label=attributes0>
+<venda_block label=attributes1,chkatt=notnull>
+<venda_block label=wasprice00,invtwas=null>
+<venda_block label=minmax1,mode=value,<venda_invtatrminsubsell>=<venda_invtatrmaxsubsell>>
+<div id="parentprice"><venda_currsym><venda_invtatrmaxsubsell></div>
+</venda_block label=minmax1>
+<venda_block label=minmax0,mode=value,<venda_invtatrminsubsell>!=<venda_invtatrmaxsubsell>>
+<div id="parentprice"><venda_currsym><venda_invtatrminsubsell> - <venda_currsym><venda_invtatrmaxsubsell></div>
+</venda_block label=minmax0>
+</venda_block label=wasprice00>
+<venda_block label=wasprice11,invtwas=notnull>
+<venda_block label=minmax11,mode=value,<venda_invtatrminsubsell>=<venda_invtatrmaxsubsell>>
+<div id="parentprice" style="color:#C1392D;"><venda_currsym><venda_invtatrmaxsubsell></div>
+</venda_block label=minmax11>
+<venda_block label=minmax00,mode=value,<venda_invtatrminsubsell>!=<venda_invtatrmaxsubsell>>
+<div id="parentprice" style="color:#C1392D;"><venda_currsym><venda_invtatrminsubsell> - <venda_currsym><venda_invtatrmaxsubsell></div>
+</venda_block label=minmax00>
+</venda_block label=wasprice11>
+</venda_block label=attributes1>
+</venda_block>
+<venda_block invtivtype=furniturerange>
+<div class="atributesPrice attrFeedback" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<meta itemprop="priceCurrency" content="<venda_currencycode>">
+<venda_block label=instock,invtatrinstock&gt;0><link itemprop="availability" href="http://schema.org/InStock"></venda_block label=instock><venda_block label=outofstock,invtatrinstock&lt;1><link itemprop="availability" href="http://schema.org/OutOfStock"></venda_block label=outofstock>
+<venda_inctemplate type=includes,name=priceFormat>
+</div>
+</venda_block>
+</div>
+</div>
+<div class="product-brand_more">
+<div class="product-brand-image">
+<venda_block label=brandlogo1,pdxtbrandlogo=notnull>
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/brand/<venda_pdxtbrandlogo>">
+</venda_block label=brandlogo1>
+</div>
+<div class="product-more">
+<ul>
+<!--<venda_block label=brand1,pdxtbrandtext=notnull>
+<li itemscope itemtype="http://schema.org/Organization">More from <span itemprop="name"><venda_pdxtbrandtext></span></li>
+</venda_block label=brand1>-->
+<!--<venda_block label=designer1,pdxtdesignertext=notnull>
+<li itemscope itemtype="http://schema.org/Person">About <span itemprop="name"><venda_pdxtdesignertext></span></li>
+</venda_block label=designer1>-->
+<venda_block label=range1,pdxtrange!=,pdxtrange=notnull,operator=or>
+<li>More from <a href="<venda_dispview icat=<venda_invtcatref0>>&parentCategoryRef=<venda_invtcatref0>&pdxtrange=<venda_pdxtrange>"><venda_pdxtrange></a></li>
+</venda_block label=range1>
+<venda_block label=catbrowse1,pdxtbrowse!=,pdxtbrowse=notnull,operator=or>
+<li>More <a href="<venda_dispview icat=<venda_invtcatref0>>?pdxtbrowse=<venda_pdxtbrowse>"><venda_pdxtbrowse></a></li>
+</venda_block label=catbrowse1>
+</ul>
+</div>
+</div>
+</div>
+<div class="avail-shipping">
+<div class="prod-availability">
+<div class="availability-badge">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/availability-badge.gif">
+</div>
+<div class="availability-logic">
+<venda_block invtivtype=furniture>
+<venda_inventory ref=<venda_invtref>,temp=availability>
+</venda_block>
+<venda_block invtivtype=furniturerange>
+<div class="productDetailGradientBox attrFeedback stockFeedbackBox">
+<span id="productstatus"><venda_text id=site.attributes.product_detail.please_make_selection></span>
+<span id="stockstatus"></span> <span id="atrononhandholder" class="hide"><venda_text id=site.attributes.product_detail.only><span id="atronhand"></span><venda_text id=site.attributes.product_detail.left></span>
+</div>
+</venda_block>
+</div>
+</div>
+<div class="prod-shipping">
+<venda_block label=healsexpress,pdxtexpress=1>
+<div class="express-badge-holder">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/heals-express.gif" style="margin:0 0 8px 0; float: right;">
+</div>
+</venda_block label=healsexpress>
+<div class="shipping-badge">
+<venda_block label=furniture1,invtwunits=Furniture>
+<a href="<venda_dispview page=furniture_delivery>&layout=popups" rel="popup console 730 1000" alt="<venda_text id=site.link.title.delivery_charge_from>">
+<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/furniture-delivery-badge.gif"></a>
+</venda_block label=furniture1>
+</div>
+<div class="shipping-logic">
+<venda_block label=furniturefree,invtsell&gt;999,invtwunits=Furniture,operator=and>
+<venda_page page=deliverycondition0>
+</venda_block label=furniturefree>
+<venda_block label=furniturecost,invtsell&lt;1000,invtwunits=Furniture,operator=and>
+<venda_page page=deliverycondition50>
+</venda_block label=furniturecost>
+</div>
+</div>
+</div>
+</div>
+<venda_block label=nonrange,invtivtype=furniture>
+<div class="box productDetailGradientBox buyControls" style="clear:both;text-decoration:none;">
+<form name="form" action="http://www.heals.co.uk/" method="get" name="addproductform" id="addproductform">
+<input type="hidden" name="ex" value="co_wizr-shopcart2">
+<input type="hidden" name="curpage" value="">
+<input type="hidden" name="buy" value="<venda_invtref>">
+<input type="hidden" name="invt" value="<venda_invtref>">
+<input type="hidden" name="ivref" value="<venda_invtref>">
+<input type="hidden" name="bsref" value="heals">
+<input type="hidden" name="log" value="22">
+<input type="hidden" name="mode" value="add">
+<input type="hidden" name="next" value="">
+<input type="hidden" name="bklist" value="">
+<input type="hidden" name="layout" value="">
+<venda_block label=250,invtavail&gt;0,etadyleft&gt;0,operator=or>
+<!-- start: button link image -->
+<venda_block label=700,chkatt=null>
+<div id="addproductbox" class="addproductbox" style="padding: 20px 0 0 0;">
+<div id="qtybox" class="qtybox"><label for="qty"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/quantity.gif" alt="Quantity"></label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
+<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
+<input type="hidden" name="VBMTCinput" value="">
+<input type="hidden" name="VBMSTinput" value="">
+<input type="hidden" name="htxt" id="htxt" value="<venda_htxt mode=make,mattress=true>"> 
+<input type="image" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/add-to-basket.gif" alt="Add to Basket" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder">
+<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
+<venda_block label=ustyper1,ustype=R>
+<a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper1><venda_block label=ustyper0,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper0><img style="padding:0 0 0 7px;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/checkout.gif" alt="Go To Checkout"></a>
+</venda_block label=353456>
+</div>
+</venda_block label=700>
+</venda_block label=250>
+<venda_block label=nostocknonfurnrange1,invtavail&lt;0,invtavail=0,invtavail=null,operator=or>
+<venda_block label=nostocknonfurnrange2,etadyleft=null,etadyleft&lt;1,operator=or>
+<div style="padding: 10px 0 0 0;">
+<a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=site.link.title.email_when_in_stock.invt>" id="emwbis_link" class="emwbisLink button" data-track="open-emwbis"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/emwbis.gif" alt="Email Me When Back In Stock" /></a>
+</div>
+</venda_block label=nostocknonfurnrange2>
+</venda_block label=nostocknonfurnrange1>
+<!-- end: buyControl div -->
+</form>
+</div>
+</venda_block label=nonrange>
+<venda_block label=furniturerange-attribute1,invtivtype=furniturerange>
+<div class="attributes">
+<!-- start: attributes dropdown -->
+<div id="attributeInputs" class="attributeInputs">
+<venda_block label=21,selatt1=notnull>
+<div>
+<venda_block label=mattress-prod11,invtcatref0=mattresses>
+<label for="att1">Choose Your Tension</label>
+</venda_block label=mattress-prod11>
+<venda_block label=mattress-prod00,invtcatref0!=mattresses>
+<label for="att1">Choose Your <!--<venda_pdxtattrname>-->Selection</label>
+</venda_block label=mattress-prod00>
+<select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=site.product_detail.attribute.att1></option><venda_selatt1></select>
+</div>
+</venda_block label=21>
+</div>
+</div>
+</venda_block label=furniturerange-attribute1>
+<div style="clear: both;"></div>
+<!-- end: attributes dropdown -->
+<!-- ATTRIBUTES SETTINGS -->
+<venda_block label=1000,chkatt=notnull>
+<div id="attributesForm" style="display: none;">dropdown</div>
+<!--<venda_block label=mattress-prod1111,invtcatref0=mattresses>-->
+<!--</venda_block label=mattress-prod1111>
+<venda_block label=mattress-prod0000,invtcatref0!=mattresses>
+<div id="attributesForm" style="display: none;">swatch<venda_block label=selatt1true,mode=value,<venda_pdxtattrname>=Colour>swatch</venda_block label=selatt1true><venda_block label=selatt1false,mode=value,<venda_pdxtattrname>!=Colour>dropdown</venda_block label=selatt1false></div>
+</venda_block label=mattress-prod0000>-->
+<venda_tpcomment><!-- dropdown, halfswatch, swatch, grid, multiAdd2 --></venda_tpcomment>
+<div id="invtref" style="display: none;"><venda_invtref></div>
+<div id="attributeNames">
+<div class="att1" style="display: none;"><venda_att1></div>
+</div>
+<div id="invtrelease" style="display: none;"><venda_invtrelease></div>
+</venda_block label=1000>
+<!-- eo ATTRIBUTES SETTINGS -->
+<!-- eo ONE PRODUCT -->
+<venda_block invtivtype=furniturerange>
+<venda_block label=32,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull><div id="tag-addedmsgref" style="text-align:center;border:1px solid #B4B4B4;padding:5px;background-color:#F1F1F1;margin:10px 0 0 0;"><venda_addedmsg msg=You have added addedqty x addedname to your basket></div>
+<div id="tag-vbminvtaddedtocart" style="display:none;"><venda_invtref></div></venda_block label=32>
+<div class="box productDetailGradientBox buyControls" style="text-decoration:none;">
+<venda_block label=701,chkatt=notnull>
+<script type="text/javascript">
+$(function(){$("#addproductform").submit(function(){if(jQuery(".qty").val()>0){return true}else{alert(jQuery("#attributes-quantity").text());return false}})})
+</script>
+<div id="addproductbox" class="addproductbox">
+<div id="qtybox" class="qtybox"><label for="qty"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/quantity.gif" alt="Quantity"></label><input name="qty" id="qty" type="text" value="1" size="3" maxlength="3" class="qty textInput"></div>
+<input type="hidden" name="VBMTCinput" value="">
+<input type="hidden" name="VBMSTinput" value="">
+<input type="image" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/add-to-basket.gif" alt="Add to Basket" value="<venda_text id=site.button.add_to_basket>" data-track="addtobasket" class="preorder">
+<venda_block label=353456,mode=value,<venda_addedmsg msg=<venda_text id=site.addedmsg>>=notnull>
+<venda_block label=ustyper11,ustype=R>
+<a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=confirm&param1=login"></venda_block label=ustyper11><venda_block label=ustyper00,ustype!=R><a href="<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login"></venda_block label=ustyper00><img style="padding:0 0 0 7px;" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/checkout.gif" alt="Go To Checkout"></a>
+</venda_block label=353456>
+</div>
+</venda_block label=701>
+<a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=site.link.title.email_when_in_stock.invt>" id="emwbis_link" class="emwbisLink button" data-track="open-emwbis"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/emwbis.gif" alt="Email Me When Back In Stock" /></a>
+</div>
+</form>
+			</div>
+		</div>
+</venda_block>
+</div>
+<div class="clear-all"></div>
+<venda_block label=219,chkatt=notnull>
+<venda_inctemplate name=attributeData,type=invt>
+<venda_tpcomment><!-- Used to load attribute product data--></venda_tpcomment>
+<venda_mediagrid template=alternateviewGrid>
+<venda_tpcomment><!-- Used to load attribute media image and image data --></venda_tpcomment>
+</venda_block label=219>
+<script type="text/javascript">
+$(document).ready(function(){
+    var imageArea = $('.zoomableImages').height();
+	var productDetailAtabs = $('.product-detailATabs').height();
+	var productTabs = (imageArea - productDetailAtabs) - 110;
+	$('.description-text,.details-text,.reviews-text').css('min-height', productTabs);
+});
+$(window).load(function() {
+	var imageArea = $('.zoomableImages').height();
+	var productDetailAtabs = $('.product-detailATabs').height();
+	var productTabs = (imageArea - productDetailAtabs) - 110;
+	$('.description-text,.details-text,.reviews-text').css('min-height', productTabs);
+});
+</script>
+<!-- Start Including TAB -->
+<venda_inctemplate name=productdetail_tab,type=invt>
+<!-- End Including TAB -->
+</div>
+</div>
+<div class="clear-all"></div>
+<venda_block label=mattressdivans,invtcatref0=mattresses,invtcatref0=divan-beds,operator=or>
+<div class="mattressInfo">
+<div class="mattressInfo-title">Mattress Information</div>
+<div class="mattressInfo-body">
+<div class="mattressInfo-image"><venda_media rec=invt,type=pict,key=mattress-info></div>
+<div class="mattressInfo-text"><venda_page page=<venda_invtref>-mattress></div>
+<div class="clear-all"></div>
+</div>
+</div>
+</venda_block label=mattressdivans>
+<!-- tag values used to append crumbtrail with product name. -->
+<div id="tags_invtName" class="hide"><venda_invtname></div>
+<!-- tpxt for Meta tag -->
+<div class="hide"><venda_category rec=icat,ref=<venda_invtcatref0>,temp=categoryname></div>
+<venda_tpxt mode=set,name=invtname,value=<venda_invtname>>
+<venda_tpxt mode=set,name=invtmainref,value=<venda_invtref>>
+<venda_tpxt mode=set,name=pdxtbrowseby,value=<venda_pdxtbrowse>>
+<venda_tpxt mode=set,name=parent,value=<venda_invtcatref0>>
+<venda_tpxt mode=set,name=invtref,value=<venda_invtref>>

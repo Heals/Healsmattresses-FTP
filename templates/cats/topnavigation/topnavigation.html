@@ -1,0 +1,62 @@
+<script>
+$(document).ready(function () {
+	var pcatref = $(".pcatref").text();
+	var catref = $(".catref").text();
+	if (catref != ""){
+		$("ul#topnav li div."+catref).css('background-color','#E0E4E8');
+        $("ul#topnav li div."+catref+" a").css('color','#333333');
+	}
+	if(pcatref != ""){
+		$("ul#topnav li div."+pcatref).css('background-color','#E0E4E8');
+        $("ul#topnav li div."+pcatref+" a").css('color','#333333');
+	}
+    $("ul#topnav li div.mattresses,ul#topnav li div.duvets,ul#topnav li div.pillows,ul#topnav li div.sleep,").hover(function () {
+        $(this).find("span.dropdown").stop(true, true).slideDown("fast");
+    }, function () {
+			var mattressNav = $(this);
+			if ($(this).attr("class") != catref){
+				setTimeout( function(){
+        			$(mattressNav).find("span.dropdown").slideUp("fast");
+					$(mattressNav).css('background-image', 'url("<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/topnav/topnav-darkgrey.gif")');
+        			$("a", mattressNav).css('color','#ffffff');
+					$(".arrow", mattressNav).hide();
+				}, 200);
+			}
+			else {
+				setTimeout( function(){
+        			$(mattressNav).find("span.dropdown").slideUp("fast");
+				}, 200);
+			}
+		});
+    $("ul#topnav li div").hover(function () {
+        $("a", this).css('color','#333333');
+        $(this).css('background-color', '#E0E4E8');
+    }, function () {
+		if ($(this).attr("class") != catref && $(this).attr("class") != pcatref && $(this).attr("class") != "mattresses" && $(this).attr("class") != "duvets" && $(this).attr("class") != "pillows" && $(this).attr("class") != "sleep") {
+        $(this).css('background-image', 'url("<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/topnav/topnav-darkgrey.gif")');
+        $("a", this).css('color','#ffffff');
+		$(".arrow", this).hide();
+		}
+    });
+});
+</script>
+<venda_detblock>
+<li><div class="<venda_icatref1>">
+<venda_block mode=value,<venda_icatref1>=mattresses>
+<a href="<venda_dispview page=mainmattress>">
+</venda_block>
+<venda_block mode=value,<venda_icatref1>=duvets>
+<a href="<venda_dispview page=mainduvet>">
+</venda_block>
+<venda_block mode=value,<venda_icatref1>=pillows>
+<a href="<venda_dispview page=mainpillow>">
+</venda_block>
+<venda_block mode=value,<venda_icatref1>!=mattresses,<venda_icatref1>!=duvets,<venda_icatref1>!=pillows>
+<a href="<venda_dispview icat=<venda_icatref1>>">
+</venda_block>
+
+<venda_icatname1></a><span class="dropdown"><span class="dropdown-gradient"></span><venda_page page=<venda_icatref1>-dropdown></span></div></li>
+</venda_detblock>
+<ul id="topnav">
+<venda_detail>
+</ul>
