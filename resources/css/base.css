@@ -27,8 +27,8 @@ ul#topnav li div span.dropdown {width: 100%; height: auto; background: #fff; pos
 /*.topnav-gradient {z-index:1;height:7px;width:940px;float:left;background-image:url("../images/topnav/topnav-gradient.png");background-repeat:repeat; margin-top:0px; margin-right:0px; margin-bottom:10px; margin-left:0px;}*/
 .dropdown-gradient {height:7px;width:940px;float:left;position:absolute;top:149px;left:0;background-image:url("../images/topnav/topnav-gradient.png");background-repeat:repeat; display:none;}
 .navContainer {width:920px;height:110px;padding:10px;z-index:6000;}
-.navColumn {width:230px;float:left;padding: 0 0.5% 0 0; margin-bottom:1%;}
-.navColumn .colTitle {padding:5px;text-align:left;float:left;width: 214px;margin: 0 5px;background-color: #fff; border-bottom:1px solid #747679; font-family:"Times New Roman", Times, serif; font-weight:bold; font-style:italic;}
+.navColumn {width:230px;float:left;padding: 0 0.5% 0 0; margin-bottom:1%;height:230px;}
+.navColumn .colTitle {padding:5px;text-align:left;float:left;width: 214px;margin: 0 5px;background-color: #fff; border-bottom:1px solid #747679; font-family:"Times New Roman", Times, serif; font-weight:bold; font-style:italic;font-size: 1.2em;}
 .navColumn ul {padding:0px 25px;}
 .navColumn li {width:214px !important;text-align:left;margin: 5px 0 0 !important;}
 /* eo Top Navigation */
