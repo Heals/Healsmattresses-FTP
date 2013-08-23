@@ -47,7 +47,7 @@ var availDoubleCheck = "";
 			</venda_detblock_sortedby>
 			<form>
 
-			<label for="sortby" style="float:left;"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/Search/sortby.gif" border="0" /></label>
+			<label for="sortby"><venda_text id=site.search_results.label.sort_by></label>
 			<select name="sortby" id="sortby">
 				<venda_tpcomment><!-- Known issue: venda_searchurl is not translating as required for 'Most Relevant' option. New tag needed like venda_baseurl without params &sort &order --></venda_tpcomment>	
 				<venda_block label=12,mode=value,<venda_setting type=ebiz,name=sortrelevantfirst>=1><option value="<venda_searchurl sort=,setpagenum=1>">Bestsellers</option></venda_block label=12>
