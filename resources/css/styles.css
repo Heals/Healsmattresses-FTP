@@ -42,6 +42,170 @@ html > body #col-two-no-three { /* IE7 - Moz */
 /**********/
 #content-norecord #col-one{display:none;}
 #content-norecord #col-two-three{float:left;padding:6px}
+
+.mainheader {
+width: 100%;
+margin: 3% 0 3%;
+vertical-align: text-middle;
+background: url(http://www.heals.co.uk/content/ebiz/heals/resources/images/header-stripe.gif)repeat-x center top;
+display: block;
+}
+
+.mainheader h1{
+background: #ffffff;
+text-transform: uppercase;
+font-size: 2em;
+color: #747679;
+font-family:"Times New Roman", Times, serif;
+font-weight: normal;
+border: 1px solid #747679;
+padding: 0.5% 5%;
+margin: auto;
+width: 33%;
+text-align: center;
+}
+
+/* tabs styles */
+
+.mm_ul{
+float: left;
+margin: 10px 0 0;
+line-height: 30px;
+text-align: center;
+background:#fff;
+color:#fff;
+width: 100%;
+border-top: 1px solid #747679;
+}
+
+.mm_ul li {
+float: left;
+font-weight: normal;
+position: relative;
+padding: 0 2% 0 1%;
+font-family:"Times New Roman", Times, serif;
+font-weight:bold;
+font-style:italic;
+}
+
+.mm_ul li a {
+background: #fff;
+border-right: 0px solid #747679;
+color: #747679;
+display: block;
+text-decoration: none;
+text-align: left;
+font-size: 1.1em;
+}
+
+.mm_subcat a {font-size:0.8em; font-style:normal;}
+
+.mm_ul li a:hover,
+li.mm_liSelected a {
+    background-position: 0 -130px;
+    border-left-color: transparent;
+}
+
+.mm_sub {
+background-color: #fff;
+border: 1px solid #747679;
+color: #747679;
+display: none;
+left: -1px;
+padding: 0 0 10%;
+position: absolute;
+text-align: left;
+top: 30px;
+z-index: 1001;
+width: 700% !important;
+height: auto;
+}
+
+.mm_left .mm_sub {
+left: 0;
+right: 0;
+
+}
+
+.mm_sub ul {
+float: left;
+line-height: 18px;
+width: 156px;
+}
+
+.mm_sub li {
+font-weight: normal;
+width: 156px;
+font-style:normal;
+}
+
+.mm_sub li a {
+    background: #fff none;
+    border-left: none;
+    border-right: none;
+    color: #747679;
+    display: block;
+    height: 21px;
+    padding-left: 15px;
+}
+
+#mm_ul li a:hover{
+opacity:0.6;
+cursor:pointer;
+background:#fff;
+}
+
+.mm_sub .mm_subheader, .mm_subheader h2 {
+border-bottom: 1px solid #747679;
+color: #747679;
+font-weight: bold;
+padding: 10px 0 5px;
+margin: 5px 10px 10px;
+text-transform:none;
+text-align:left;
+font-size:1.2em;
+font-style:italic;
+}
+ 
+.mm_subheader h2 {
+font-size:1.2em;
+line-height: 28px;
+padding-top: 0;
+font-style:italic;
+}
+
+.mm_subheader {
+font-size:1.2em;
+line-height: 28px;
+padding-top: 0;
+font-style:italic;
+}
+
+.mm_subcat a {font-style:normal; font-size:1em !important;}
+
+.mm_row {
+border-bottom: 1px dotted #ccc;
+clear: both;
+float: left;
+margin-bottom: 10px;
+padding-bottom: 5px;
+width: 100%;
+}
+
+.mm_topCategoriesUl, .mm_subheader {
+    display: block;
+}
+
+.mm_topCategoriesUl {
+margin: 0 2%;
+width: 20% !important;
+height: 280px;
+}
+
+.mm_active_2 {
+font-weight: bold;
+}
+
 /* 3. Fonts, styles and sizes if > 0px - Start styles_typography.css */
 /****************/
 /* GLOBAL FONTS */
