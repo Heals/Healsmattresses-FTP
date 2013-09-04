@@ -10,7 +10,7 @@ $(document).ready(function () {
 		$("ul#topnav li div."+pcatref).css('background','#fff');
         $("ul#topnav li div."+pcatref+" a").css('color','#747679');
 	}
-    $("ul#topnav li div.mattresses,ul#topnav li div.duvets,ul#topnav li div.pillows,ul#topnav li div.sleep,ul#topnav li div.heals").hover(function () {
+    $("ul#topnav li div.mattresses,ul#topnav li div.duvets,ul#topnav li div.pillows,ul#topnav li div.sleep,").hover(function () {
         $(this).find("span.dropdown").stop(true, true).slideDown("fast");
     }, function () {
 			var mattressNav = $(this);
@@ -32,7 +32,7 @@ $(document).ready(function () {
         $("a", this).css('color','#747679');
         $(this).css('background','#fff');
     }, function () {
-		if ($(this).attr("class") != catref && $(this).attr("class") != pcatref && $(this).attr("class") != "mattresses" && $(this).attr("class") != "duvets" && $(this).attr("class") != "pillows" && $(this).attr("class") != "sleep"  && $(this).attr("class") != "heals") {
+		if ($(this).attr("class") != catref && $(this).attr("class") != pcatref && $(this).attr("class") != "mattresses" && $(this).attr("class") != "duvets" && $(this).attr("class") != "pillows" && $(this).attr("class") != "sleep") {
         $(this).css('background-image', 'url("<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/topnav/topnav-darkgrey.gif")');
         $("a", this).css('color','#747679');
 		$(".arrow", this).hide();
