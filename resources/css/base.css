@@ -29,8 +29,8 @@ ul#topnav li div span.dropdown {width: 100%; height: auto; background: #fff; pos
 .navContainer {width:920px;height:110px;padding:10px;z-index:6000;}
 .navColumn {width:230px;float:left;padding: 0 0.5% 0 0; margin-bottom:1%;height:230px;}
 .navColumn .colTitle, .navColumn_end .colTitle {padding:5px;text-align:left;float:left;width: 214px;margin: 0 5px;background-color: #fff; border-bottom:1px solid #747679; font-family:"Times New Roman", Times, serif; font-weight:bold; font-style:italic;font-size: 1em;}
-.navColumn ul {padding:0px 25px;}
-.navColumn li {width:214px !important;text-align:left;margin: 5px 0 0 !important;}
+.navColumn ul, .navColumn_end ul {padding:0px 25px;}
+.navColumn li, .navColumn_end li {width:214px !important;text-align:left;margin: 5px 0 0 !important;}
 /* eo Top Navigation */
 /* so Header */
 .header-background {background-color:#fff;}
