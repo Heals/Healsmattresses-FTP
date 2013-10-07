@@ -196,7 +196,8 @@ select#sortby {-webkit-appearance: none;-webkit-border-radius: 0;border: 1px sol
 #availprodrecs .prods ul .image {border:none;float:left;width:220px;height:220px;}
 #searchResults .prods ul li h2,
 #availprodrecs .prods ul li h2,
-#productlist ul.products li h2 {text-align: left;padding: 0px 4px 0px 4px;}
+#productlist ul.products li h2 {text-align: left;padding: 0px 4px 0px 4px;font-size: 1.1em;
+font-weight: normal;}
 #searchResults .prods ul li .details,
 #availprodrecs .prods ul li .details,
 #productlist ul.products li .details {width: 210px;text-align: left;float: left;padding: 5px;}
