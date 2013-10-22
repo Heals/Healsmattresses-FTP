@@ -56,9 +56,26 @@ function hideproductdetailtabs(a){$(a).hide();}
           <p><a href="#rangeProducts" class="scroll" style="color:#333333;">View 
             all <strong><venda_invtatrtot></strong> products in <strong><venda_invtname></strong> 
             range.</a></p>
-          </venda_block label=pir> </div>
+          </venda_block label=pir>
+          
+			<venda_block label=4112,pdxtrec=notnull>
+			<div class="pdxtRecContainer">
+			<a itemprop="image" href="http://<venda_dispview invt=<venda_pdxtrec>>" target="_blank" alt="Our Recommended Product" style="float:left">
+			<!--venda_media rec=invt,type=movie-swf-pict,key=bulb,dyn=yes,width=80,height=80-->
+			<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/invt/<venda_pdxtrec>/<venda_pdxtrec>_m.jpg" style="width:80px; height:80px; float:left; margin-left: 15%;">
+			</a>
+				<div class="pdxtRecContainer_text">
+				<h2>Add this item</h2>
+				<venda_pdxtrecdesc>
+				<a href="<venda_dispview invt=<venda_pdxtrec>>" target="_blank"><h3>Click here to buy</h3></a>
+				</div>
+			</div>
+			</venda_block label=4112>
+
+        </div>
         <div class="anyquestion left"<venda_block label=onlineE,pdxtstoreavail=1> style="margin-bottom:20px;"</venda_block label=onlineE>> 
-        <venda_extflds template=pdxtlist,group=3,ref=<venda_invtref>,ivtype=<venda_invtivtype>></div>
+        <venda_extflds template=pdxtlist,group=3,ref=<venda_invtref>,ivtype=<venda_invtivtype>>
+        </div>
       <div class="clear-all"></div>
     </div>
 <venda_block label=800,pdxtstoreavail=1><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/online_only_product.gif" style="position:absolute;bottom:0;"></venda_block label=800>

@@ -834,6 +834,16 @@ font-size:11px;
 .extflds table th {font-size:1.2em;padding:5px 0 5px 5px;}
 .extflds table td.pdxtname {font-weight:bold;padding:0 0 0 5px;color:#777;}
 .extflds table td.pdxtvalue {color:#777;}
+.pdxtRecContainer {
+width: 100%;
+margin: 5% 0px 0px;
+border-top: 1px solid rgb(116, 118, 121);
+padding: 3% 0px;
+}
+.pdxtRecContainer_text {
+float: right;
+width: 75%;
+}
 /**********/
 /* PACKAGE */
 /**********/
