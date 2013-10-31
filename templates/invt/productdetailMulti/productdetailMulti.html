@@ -185,7 +185,7 @@ $(window).load(function() {
 </div>
 <div class="clear-all"></div>
 </div>
-<form name="form" action="https://www.heals.co.uk/bin/venda?ex=co_wizr-shopcart2&bsref=heals&wizard=shopcart2&step=confirm&param1=login" method="post" name="addproductform" id="addproductform">
+<form name="form" action="https://www.heals.co.uk/" method="post" name="addproductform" id="addproductform">
 <input type="hidden" name="bsref" value="heals">
 <input type="hidden" name="log" value="22">
 <input type="hidden" name="mode" value="addmul">
@@ -333,7 +333,7 @@ var one_day=1000*60*60*24*7;
 if ((onhand <= 0) && (etadate < today)) {
 document.write("<a href=\"<venda_dispview invt=<venda_invtref>>&temp=emailinstock\" title=\"<venda_text id=site.link.title.email_when_in_stock.invt>\" data-invtref=\"<venda_atrsku>\" id=\"emwbis_link_button\" class=\"emwbisLink button\" data-track=\"open-emwbis\" style=\"display:block;\"><img src=\"<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/emwbis-range.gif\" alt=\"Email Me When Back In Stock\" style=\"display:block;\" /></a>")}
 else {
-document.write("<input type=\"hidden\" name=\"itemlist\" class=\"itemlist\" value=\"<venda_atrsku>\" id=\"itemlist_<venda_atrsku>\"><div class=\"buttonMultiAdd box productDetailGradientBox buyControls\" style=\"padding:0;margin:0;text-decoration:none;\"><img src=\"<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/quantity.gif\" alt=\"Quantity\"><input class=\"qty textInput\" name=\"qtylist\" id=\"qtylist_<venda_atrsku>\" type=\"text\" value=\"0\" size=\"3\" maxlength=\"3\"><input id=\"addProduct_<venda_atrsku>\" type=\"image\" class=\"button buttonAlt buttonArrow add submitM addproduct\" value=\"<venda_text id=site.button.add_to_basket>\" onClick=\"document.form.ex.value='co_disp-shopc';\" data-track=\"addtobasket\" src=\"<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/add-to-basket.gif\" /></div>")}
+document.write("<input type=\"hidden\" name=\"itemlist\" class=\"itemlist\" value=\"<venda_atrsku>\" id=\"itemlist_<venda_atrsku>\"><div class=\"buttonMultiAdd box productDetailGradientBox buyControls\" style=\"padding:0;margin:0;text-decoration:none;\"><img src=\"<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/quantity.gif\" alt=\"Quantity\"><input class=\"qty textInput\" name=\"qtylist\" id=\"qtylist_<venda_atrsku>\" type=\"text\" value=\"0\" size=\"3\" maxlength=\"3\"><input id=\"addProduct_<venda_atrsku>\" type=\"image\" class=\"button buttonAlt buttonArrow add submitM addproduct\" value=\"<venda_text id=site.button.add_to_basket>\" onClick=\"<venda_codehttps>?ex=co_wizr-shopcart2&bsref=<venda_bsref>&wizard=shopcart2&step=billtologin&param1=login\" data-track=\"addtobasket\" src=\"<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/product-detail/add-to-basket.gif\" /></div>")}
 </script>
 </div>
 </div>
