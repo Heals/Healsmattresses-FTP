@@ -1,3 +1,4 @@
+<!-- updated -->
 <script>
 $(document).ready(function () {
 	var pcatref = $(".pcatref").text();
@@ -5,6 +6,10 @@ $(document).ready(function () {
 	if (catref != ""){
 		$("ul#topnav li div."+catref).css('background','#fff');
         $("ul#topnav li div."+catref+" a").css('color','#747679');
+	}
+	if (catref= "vi-spring"){
+		$("li div."+catref).css('display','none');
+		$("li").css('list-style-type','none');
 	}
 	if(pcatref != ""){
 		$("ul#topnav li div."+pcatref).css('background','#fff');
